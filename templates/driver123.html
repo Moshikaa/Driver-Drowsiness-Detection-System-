@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+    });
+});
+</script>
+<style>
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #E9CCC3;
+    border: solid 1px #c3c3c3;
+}
+#panel {
+    padding: 50px;
+    display: none;
+}
+  h1{
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 45px;
+  }
+
+#btn {
+  align-self: center;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+#btn:hover{
+  background-color: #7a4938;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+  
+</style>
+</head>
+<body>
+  <header style="height: 21vh">
+    <div class="row">
+      <div class="logo">
+        <img src="{{url_for('static', filename='logoddd.png')}}">      
+        <h1>Driver's Drowsiness Detection System</h1>
+    </div>
+  </header>
+ 
+  <div id="flip"><button id="btn" onclick="myFunction()" style ="color :black;text-align:center"><b>CLICK HERE TO START DRIVING</b></button></div>
+  <div id="panel"><h3 style ="color :black;font-family: sans-serif;text-align:center">DRIVE SAFE!!</h3>
+    <p style ="color : black;text-align:center"><em>-------------------------------------</em><br><br><div class="dude"><div class="bruh"></div></div></p></p>
+    <div><button id="btn" class="dudes" onclick="stahp()" style="color :black;text-align:center">Stop Driving</button></div>
+  </div>
+  </div>
+  <!-- <img id="bg" src="{{ url_for('video_feed') }}"> -->
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border"> 
+    </span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:#E9CCC3;text-align:center;padding:50px 80px;text-align: justify;">
+  <h2 style="text-align:center;">DROWSINESS: The Concern</h2>
+  <p style="text-align: center;">The increasing number of traffic accidents are attributed to human errors, especially drowsiness. The state of drowsiness causes people to lose their vigilance, hence becoming a danger not only to themselves, but also their surroundings. Data suggests that 30% of all traffic accidents have been caused by drowsiness.</p>
+</div>
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#777;background-color:#E9CCC3;text-align:center;padding:50px 80px;text-align: justify;">
+    <h2 style="text-align: center;">DETECTION SOFTWARE: The solution</h2>
+    <p style="text-align: center;">The software has been finally developed into a web app and at its core, makes use of Computer Vision, more specifically eye blinking detection and template matching in the OpenCV python library. As soon as the user opens this web app, he/she will have the option to start the software at will which is at the top of this page. Once the detection software is run, it records the subject’s face and simultaneously processes the frames in real time to assess the facial features. The software is extremely smart and uses an extremely important ratio called the “Eye Aspect Ratio” or EAR to make the decision of whether the subject(driver) is drowsy or not and consequently sound the alarm.</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#777;background-color:#E9CCC3;text-align:center;padding:50px 80px;text-align: justify;">
+    <h2 style="text-align: center;">ABOUT US</h2>
+    <p style="text-align: center;">We are a team of three budding computer engineers passionate about delivering the best, most efficient possible solutions to pressing real world issues. This software was one such solution to an old, daunting issue to have existed ever since the inception of automobiles. Stay tuned for more!</p>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+function myFunction(){
+  $(document).ready( function() {
+    $.get("/stonks");
+    $('.bruh').html('<img id="dude" src="{{url_for("video_feed")}}"/>')
+  });
+}
+function stahp(){
+  $.get("/stahp");
+  var element = document.getElementById(dude);
+  element.remove();
+}
+$(document).ready(function(){
+    $(".dudes").click(function(){
+        $("#panel").slideUp("slow");
+    });
+});
+</script>
+
+</body>
+</html>

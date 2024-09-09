@@ -1,0 +1,150 @@
+*
+{
+    margin : 0;
+    padding : 0;
+}
+body
+{
+    background-color: rgb(77,77,77);
+}
+header
+{
+    height: 100vh;
+    background-size: cover;
+    background-position: center; 
+}
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+.main-nav
+{
+    float:right;
+    list-style: none;
+    margin-top: 30px; 
+}
+
+.main-nav li
+{
+    display:inline-block;
+}
+
+.main-nav li a
+{
+    color :#818181;
+    text-decoration: none;
+    padding:5px 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+}
+.main-nav li a:hover
+{
+    color: #6FDBE6;
+}
+
+.main-nav li.active a
+{
+    color:#f1f1f1;
+}
+.logo img
+{
+    width: 150px;
+    height: auto;
+    float: left;
+}
+.contain {
+    position: relative;
+    text-align: center;
+    color: red;
+    font-size: 35px;
+    font-style: "Roboto",sans-serif;
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+  }
+  
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  .bgimg-1 {
+    background-image: url("drow1.jpg");
+    min-height: 400px;
+  }
+  
+  .bgimg-2 {
+    background-image: url("drow.jpg");
+    min-height: 400px;
+  }
+  
+  .bgimg-3 {
+    background-image: url("drow2.jpg");
+    min-height: 400px;
+  }
+  
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+  
+  .caption span.border {
+    background-color: #F1F1F1;
+    color: black;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 10px;
+  }
+  
+  h1{
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 45px;
+  }
+  h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+  }
+  
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1024px) {
+      .bgimg-1, .bgimg-2, .bgimg-3 {
+          background-attachment: scroll;
+      }
+  }
